@@ -23,14 +23,25 @@ fetch(`http://localhost:3000/sevices`)
 .then(data => {
     data.forEach(element => {
         bottom.innerHTML +=`
-        <div class="card">
+        <div class="card" >
         <img src="${element.image}" alt="">
         <h4><a href="">${element.name}</a><h4>
         <p>${element.description}</p>
             <i class="bi bi-heart"></i>
             <button>Update</button>
-            <button>Delete</button>
+            <button onclick="deleteCard(${element.id})">Delete</button>
+            <button onclick="details(${element.id})">View Details</button>
     </div>
     `
     })
-})  
+}) 
+
+const details = (id)=>{
+    window.location = `./details.html?id=${id}`
+    // console.log(id);
+}
+
+function deleteCard(id) {
+    axios.delete(`http://localhost:3000/sevices/${id}`)
+     window.location.reload()
+}
