@@ -28,6 +28,7 @@
 // ------------------------------- HEADER -------------------------------
 header {
   position: fixed;
+  z-index: 9999;
   width: 100%;
   @include image;
   transition: all 0.5s ease;
