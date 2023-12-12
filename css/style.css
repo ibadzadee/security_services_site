@@ -86,6 +86,9 @@ header .bottom ul a {
   font-size: 12px;
   color: white;
 }
+header .bottom ul li a:hover {
+  color: #fab700;
+}
 header .bottom .bi-list {
   display: none;
   font-size: 30px;
@@ -162,13 +165,32 @@ header img {
 }
 #services .bottom .card {
   width: 33%;
+  position: relative;
   background-color: #f9f9ff;
-  padding: 20px 25px;
+  padding: 30px 25px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   gap: 20px;
+  box-shadow: 0 0 10px black;
+}
+#services .bottom .card i {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background-color: black;
+  padding: 10px;
+  border-radius: 9999px;
+  color: white;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#services .bottom .card i:hover {
+  color: read;
 }
 #services .bottom .card p {
   font-weight: 300;
@@ -184,6 +206,18 @@ header img {
 #services .bottom .card:hover {
   background-color: #fab700;
   transition: all 0.5s ease 0s;
+}
+#services .bottom .card button {
+  padding: 5px 20px;
+  border: 1px solid transparent;
+  background-color: black;
+  color: white;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+#services .bottom .card button:hover {
+  background-color: blue;
+  transition: all 0.5s ease;
 }
 
 #unique {
@@ -380,6 +414,16 @@ footer .footer-center .follow .icons {
 }
 footer .footer-center .follow .icons i {
   color: white;
+}
+
+.details-center {
+  padding: 200px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.details-center h1 {
+  font-size: 40px;
 }
 
 @media screen and (max-width: 961px) {
