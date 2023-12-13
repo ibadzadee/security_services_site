@@ -149,28 +149,31 @@ header {
 // -------------------------------- SERVICES --------------------
 #services {
   padding: 70px 0px;
+
   .center {
     width: 100%;
     @include display;
     flex-direction: column;
+
     // gap: 2px;
     .top {
       @include display;
       flex-direction: column;
       text-align: center;
       gap: 10px;
-  
+
       h2 {
         font-size: 40px;
       }
-  
+
       p {
         margin-bottom: 1rem;
         color: $gray;
       }
     }
-    
+
   }
+
   .bottom {
     width: 100%;
     display: grid;
@@ -248,9 +251,9 @@ header {
   }
 
 
-// Load btn;
+  // Load btn;
 
-  #loadBtn{
+  #loadBtn {
     padding: 10px 20px;
     border: 1px solid transparent;
     background-color: $yelllow;
@@ -258,7 +261,8 @@ header {
     border-radius: 9999px;
     margin-top: 40px;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
       background-color: black;
       color: white;
       border: 1px solid $yelllow;
@@ -500,21 +504,35 @@ footer {
 
 // add.HTML
 
-.form{
+.form {
   width: 100%;
   @include display;
   flex-direction: column;
   gap: 20px;
   padding: 200px 0px;
-  form{
+
+  form {
     background-color: aquamarine;
     padding: 100px;
-    @include display(flex-start , flex-start);
+    @include display(flex-start, flex-start);
     flex-direction: column;
     gap: 10px;
-    label{
+
+    label {
       padding-top: 10px;
       font-weight: 700;
+    }
+
+    #submit {
+      padding: 5px 10px;
+      background-color: darkblue;
+      border: 1px solid transparent;
+      cursor: pointer;
+      color: white;
+      &:hover{
+        opacity: 0.8;
+        transition: all 0.5s ease;
+      }
     }
   }
 }

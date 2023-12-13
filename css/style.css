@@ -480,6 +480,17 @@ footer .footer-center .follow .icons i {
   padding-top: 10px;
   font-weight: 700;
 }
+.form form #submit {
+  padding: 5px 10px;
+  background-color: darkblue;
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: white;
+}
+.form form #submit:hover {
+  opacity: 0.8;
+  transition: all 0.5s ease;
+}
 
 @media screen and (max-width: 961px) {
   .container {

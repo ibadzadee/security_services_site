@@ -43,9 +43,6 @@ const imageInp = document.querySelector("#img");
 //         .then(res => {
 //             window.location = "../index.html";
 //         })
-//         .catch(error => {
-//             console.error("Error updating service:", error);
-//         });
 // }
 
 

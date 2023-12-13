@@ -1,23 +1,23 @@
 const form = document.querySelector("#form");
 const imageInp = document.querySelector("#img");
 const nameInp = document.querySelector("#name");
-const descriptionInp = document.querySelector("#descripton");
+const descriptionInp = document.querySelector("#description");
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
-    let obj = {};
     let src = imageInp.files[0];
     const reader = new FileReader();
     reader.onload = function (e) {
-        obj = {
+        let obj = {
             image: e.target.result,
             name: nameInp.value,
             description: descriptionInp.value
         };
-        axios.put(`http://localhost:3000/sevices`, obj)
+        axios.post(`http://localhost:3000/services`, obj)
             .then(res => {
-                window.location = "../index.html";
-            });
+                // window.location = "../index.html";
+                console.log(res);
+            })
     };
     reader.readAsDataURL(src);
 });
