@@ -1,41 +1,48 @@
 {
   "sevices": [
-      {
-          "id": 1,
-          "image": "./image/s1.jpg.webp",
-          "name": "Basic & Common Repairs",
-          "description": "Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical."
-        },
-      {
-          "id": 2,
-          "image": "./image/s2.jpg.webp",
-          "name": "Basic & Common Repairs",
-          "description": "Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical."
-        },
-      {
-          "id": 3,
-          "image": "./image/s3.jpg.webp",
-          "name": "Preventive Maintenance",
-          "description": "Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical."
-        },
-      {
-          "id": 4,
-          "image": "./image/s3.jpg.webp",
-          "name": "Preventive Maintenance",
-          "description": "Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical."
-        },
-        {
-            "id": 5,
-            "image": "./image/s2.jpg.webp",
-            "name": "Basic & Common Repairs",
-            "description": "Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical."
-          },
-          {
-              "id": 6,
-              "image": "./image/s1.jpg.webp",
-              "name": "Basic & Common Repairs",
-              "description": "Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical."
-            }
-
+    {
+      "id": 1,
+      "image": "./image/s1.jpg.webp",
+      "name": "Basic & Common Repairs",
+      "description": "Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical."
+    },
+    {
+      "id": 2,
+      "image": "./image/s2.jpg.webp",
+      "name": "Basic & Common Repairs",
+      "description": "Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical."
+    },
+    {
+      "image": "http://127.0.0.1:5501/image/s3.jpg.webp",
+      "name": "Preventive Maintenance",
+      "description": "Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical.",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "image": "./image/s3.jpg.webp",
+      "name": "Preventive Maintenance",
+      "description": "Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical."
+    },
+    {
+      "id": 5,
+      "image": "./image/s2.jpg.webp",
+      "name": "Basic & Common Repairs",
+      "description": "Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical."
+    },
+    {
+      "id": 6,
+      "image": "./image/s1.jpg.webp",
+      "name": "Basic & Common Repairs",
+      "description": "Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical."
+    }
+  ],
+  "favorites": [
+    {
+      "id": 1,
+      "image": "./image/s1.jpg.webp",
+      "name": "Basic & Common Repairs",
+      "description": "Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical."
+    }
   ]
 }

@@ -58,20 +58,21 @@
 
     <!-- Update HTML -->
 
-    <section class="form update">
-        <form id="form" action="">
+    <section id="add">
+        <form class="category-form">
+            <div class="imgCont">
+                <img class="modalImage" src="" alt="">
+                <input accept="image/png" type="file">
+            </div>
 
-        <label for="">Image:</label>
-        <input type="file" id="img" placeholder="choose an image"/>
+            <label for="category-name">Name:</label>
 
-        <label for="">Name:</label>
-        <input type="name" id="name" />
+            <input class="name" type="text" id="name" name="category-name" required>
 
-        <label for="">Description:</label>
-        <input type="text" id="descripton" />
+            <label for="category-name">Category:</label>
+            <input class="category" type="text" id="category" name="category-name" required>
 
-        <input type="submit" id="submit" />
-
+            <input class="submit" type="submit" value="Submit" id="submit">
         </form>
     </section>
 
@@ -114,7 +115,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    
+
     <script src="./js/update.js"></script>
 </body>
 </html>

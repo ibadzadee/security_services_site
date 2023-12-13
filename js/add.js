@@ -13,10 +13,9 @@ form.addEventListener("submit", function (event) {
             name: nameInp.value,
             description: descriptionInp.value
         };
-        axios.post(`http://localhost:3000/services`, obj)
+        axios.post(`http://localhost:3000/sevices`, obj)
             .then(res => {
-                // window.location = "../index.html";
-                console.log(res);
+                window.location = "../index.html";
             })
     };
     reader.readAsDataURL(src);

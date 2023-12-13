@@ -31,7 +31,7 @@ fetch(`http://localhost:3000/sevices?_page=${page}&_limit=3`)
         <img src="${element.image}" alt="">
         <h4><a href="">${element.name}</a><h4>
         <p>${element.description}</p>
-            <i class="bi bi-heart"></i>
+            <i onclick="addFavorite(${element.id})" class="bi bi-heart"></i>
             <div class="buttons">
             <button id="update" onclick="update(${element.id})">Update</button>
             <button id="delete" onclick="deleteCard(${element.id})">Delete</button>
@@ -48,7 +48,7 @@ loadBtn.addEventListener("click", () =>{
 })
 
 const update = (id)=>{
-    window.location = `./add.html?id=${id}`
+    window.location = `./update.html?id=${id}`
 }
 
 const details = (id)=>{
@@ -59,4 +59,13 @@ const details = (id)=>{
 function deleteCard(id) {
     axios.delete(`http://localhost:3000/sevices/${id}`)
      window.location.reload()
+}
+
+// Add Favorite 
+heart = document.querySelector(".bi-heart")
+function addFavorite(id){
+    axios.get(`http://localhost:3000/sevices/${id}`)
+    .then(res =>{
+        axios.post(`http://localhost:3000/favorites` , res.data)
+    })
 }
