@@ -7,16 +7,19 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
   font-family: "Roboto", sans-serif;
+
   a {
     text-decoration: none;
   }
+
   li {
     list-style: none;
   }
+
   &::selection {
     background-color: #fab700;
     color: #fff;
-}
+  }
 }
 
 .container {
@@ -25,6 +28,7 @@
   padding: 0px 30px;
   margin: 0 auto;
 }
+
 // ------------------------------- HEADER -------------------------------
 header {
   position: fixed;
@@ -32,26 +36,32 @@ header {
   width: 100%;
   @include image;
   transition: all 0.5s ease;
+
   .top {
     @include display(space-between, center);
     padding: 10px 0px;
     flex-wrap: wrap;
     gap: 10px;
     transition: all 0.5s ease;
+
     .icons {
       @include display;
       gap: 10px;
+
       i {
         font-size: 12px;
         color: white;
       }
     }
+
     .login {
       @include display;
       gap: 20px;
+
       a {
         font-size: 12px;
         color: white;
+
         &:hover {
           color: $yelllow;
           transition: all 0.5s ease;
@@ -59,29 +69,35 @@ header {
       }
     }
   }
+
   .bottom {
     @include display(space-between, center);
     padding: 20px 0px;
     flex-wrap: wrap;
     gap: 20px;
     transition: all 0.5s ease;
+
     ul {
       display: flex;
       gap: 30px;
+
       a {
         font-size: 12px;
         color: white;
       }
-      li a:hover{
+
+      li a:hover {
         color: $yelllow;
       }
     }
+
     .bi-list {
       display: none;
       font-size: 30px;
       color: white;
     }
   }
+
   img {
     padding-right: 180px;
   }
@@ -96,18 +112,22 @@ header {
   @include image;
   padding: 250px 0px;
   color: white;
+
   .banner-center {
     width: 100%;
     @include display(left, flex-start);
     flex-direction: column;
     gap: 30px;
+
     h1 {
       font-size: 50px;
       font-weight: 800;
     }
+
     p {
       width: 70%;
     }
+
     button {
       cursor: pointer;
       border: 1px solid transparent;
@@ -115,6 +135,7 @@ header {
       color: white;
       padding: 15px 40px;
       font-weight: 700;
+
       &:hover {
         color: $yelllow;
         transition: all 0.5s ease;
@@ -124,36 +145,50 @@ header {
     }
   }
 }
+
 // -------------------------------- SERVICES --------------------
 #services {
   padding: 70px 0px;
-  .top {
+  .center {
+    width: 100%;
     @include display;
     flex-direction: column;
-    text-align: center;
-    gap: 10px;
-    h2 {
-      font-size: 40px;
+    // gap: 2px;
+    .top {
+      @include display;
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+  
+      h2 {
+        font-size: 40px;
+      }
+  
+      p {
+        margin-bottom: 1rem;
+        color: $gray;
+      }
     }
-    p {
-      margin-bottom: 1rem;
-      color: $gray;
-    }
+    
   }
   .bottom {
-    @include display;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     gap: 20px;
     padding-top: 80px;
+
     .card {
-      width: 33%;
+      width: 100%;
       position: relative;
       background-color: $light-white;
       padding: 30px 25px;
       @include display(center, flex-start);
       flex-direction: column;
       gap: 20px;
-      box-shadow: 0 0 10px  black;
-      i{
+      box-shadow: 0 0 10px black;
+
+      i {
         position: absolute;
         top: 5px;
         right: 10px;
@@ -164,39 +199,74 @@ header {
         width: 35px;
         @include display;
         cursor: pointer;
-        &:hover{
-            color: read;
+
+        &:hover {
+          color: read;
         }
       }
+
       p {
         font-weight: 300;
         color: $gray;
         padding-bottom: 30px;
       }
+
       a {
         color: black;
       }
+
       img {
         width: 100%;
       }
+
       &:hover {
         background-color: $yelllow;
         transition: all 0.5s ease 0s;
       }
-      button{
-        padding:5px 20px;
-        border: 1px solid transparent;
-        background-color:black;
-        color: white;
-        border-radius: 9999px;
-        cursor: pointer;
-        &:hover{
+
+      .buttons {
+        @include display;
+        gap: 10px;
+
+        #update,
+        #delete,
+        #detail {
+          padding: 5px 20px;
+          border: 1px solid transparent;
+          background-color: black;
+          color: white;
+          border-radius: 9999px;
+          cursor: pointer;
+
+          &:hover {
             background-color: blue;
             transition: all 0.5s ease;
+          }
         }
       }
     }
   }
+
+  
+// Load btn;
+
+  #loadBtn{
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    background-color: $yelllow;
+    font-weight: 800;
+    border-radius: 9999px;
+    margin-top: 40px;
+    cursor: pointer;
+    &:hover{
+      background-color: black;
+      color: white;
+      border: 1px solid $yelllow;
+      transition: all 0.5s ease;
+    }
+  }
+
+
 }
 
 // -------------------------------- UNIQUE --------------------
@@ -221,7 +291,8 @@ header {
         font-size: 40px;
         font-weight: 500;
       }
-      p{
+
+      p {
         color: $gray;
       }
     }
@@ -241,9 +312,10 @@ header {
         padding: 40px 50px;
         cursor: pointer;
         background-color: white;
-        &:hover{
-            background-color: $yelllow;
-            transition: all 0.5s ease;
+
+        &:hover {
+          background-color: $yelllow;
+          transition: all 0.5s ease;
         }
 
         .head {
@@ -270,134 +342,160 @@ header {
 
 // -------------------------------- Blog --------------------
 #blog {
-    padding: 70px 0px;
-    background-color: $light-white;
-    .top {
-      @include display;
+  padding: 70px 0px;
+  background-color: $light-white;
+
+  .top {
+    @include display;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+
+    h2 {
+      font-size: 40px;
+    }
+
+    p {
+      color: $gray;
+      margin-bottom: 100px;
+      width: 70%;
+    }
+  }
+
+  .bottom {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 30px;
+
+    .card {
+      display: flex;
       flex-direction: column;
-      text-align: center;
-      gap: 10px;
-      h2 {
-        font-size: 40px;
+      gap: 15px;
+
+      &:hover {
+        img {
+          transform: scale(1.1);
+          transition: all 0.5s ease;
+        }
+
+        a h4 {
+          color: $yelllow;
+          transition: all 0.5s ease;
+        }
+
       }
+
+      .img {
+        overflow: hidden;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      #date {
+        background-color: black;
+        color: white;
+        width: 120px;
+        padding: 5px 10px;
+      }
+
+      a {
+        font-size: 20px;
+        color: black;
+      }
+
       p {
         color: $gray;
-        margin-bottom: 100px;
-        width: 70%;
+      }
+
+      .like-comment {
+        @include display(space-between, center);
       }
     }
-    .bottom{
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(4 , auto);
-        gap: 30px;
-        .card{
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            &:hover {
-                img{
-                    transform: scale(1.1);
-                    transition: all 0.5s ease;
-                }
-                a h4{
-                    color: $yelllow;
-                    transition: all 0.5s ease;
-                }
-
-            }
-            .img{
-                overflow: hidden;
-            }
-            img{
-                width: 100%;
-            }
-            #date{
-                background-color: black;
-                color: white;
-                width: 120px;
-                padding: 5px 10px;
-            }
-            a {
-                font-size: 20px;
-                color: black;
-            }
-            p{
-                color: $gray;
-            }
-            .like-comment{
-                @include display(space-between , center);
-            }
-        }
-    }
+  }
 }
+
 // -------------------------------- Footer --------------------
-footer{
-    background-color: $footer-color;
-    padding: 100px 0px;
-    color: white;
-    .footer-center{
-        width: 100%;
-        // @include display(space-between , flex-start);
-        // flex-wrap: wrap;
-        display: grid;
-        grid-template-columns: repeat(3 , auto);
-        gap: 60px;
-        p{
-            color: $gray;
-        }
-        span{
-            color: $yelllow;
-        }
-        .about{
-            // width: 100%;
-                @include display(flex-start , flex-start);
-                flex-direction: column;
-                gap: 30px;
-        }
-        .newsletter{
-            // width: 32%;
-            @include display(flex-start , flex-start);
-            flex-direction: column;
-            gap: 30px;
-            .input{
-                @include display;
-                input{
-                    width: 300px;
-                    padding: 10px 10px;
-                }
-                button{
-                    padding: 7px 10px;
-                    border: 1px solid transparent;
-                    background-color: $yelllow;
-                    color: white;
-                    font-size: 20px;
-                    cursor: pointer;
-                }
-            }
-        }
-        .follow{
-            // width: 20%;
-            @include display(flex-start , flex-start);
-            flex-direction: column;
-            gap: 30px;
-            .icons{
-                @include display;
-                gap: 20px;
-                i{
-                    color: white;
-                }
-            }
-        }
+footer {
+  background-color: $footer-color;
+  padding: 100px 0px;
+  color: white;
+
+  .footer-center {
+    width: 100%;
+    // @include display(space-between , flex-start);
+    // flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 60px;
+
+    p {
+      color: $gray;
     }
+
+    span {
+      color: $yelllow;
+    }
+
+    .about {
+      // width: 100%;
+      @include display(flex-start, flex-start);
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .newsletter {
+      // width: 32%;
+      @include display(flex-start, flex-start);
+      flex-direction: column;
+      gap: 30px;
+
+      .input {
+        @include display;
+
+        input {
+          width: 300px;
+          padding: 10px 10px;
+        }
+
+        button {
+          padding: 7px 10px;
+          border: 1px solid transparent;
+          background-color: $yelllow;
+          color: white;
+          font-size: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .follow {
+      // width: 20%;
+      @include display(flex-start, flex-start);
+      flex-direction: column;
+      gap: 30px;
+
+      .icons {
+        @include display;
+        gap: 20px;
+
+        i {
+          color: white;
+        }
+      }
+    }
+  }
 }
 
-.details-center{
-    padding: 200px 0px;
-    @include display;
-    h1{
-        font-size: 40px;
-    }
+.details-center {
+  padding: 200px 0px;
+  @include display;
+
+  h1 {
+    font-size: 40px;
+  }
 }
 
 
@@ -408,44 +506,61 @@ footer{
   .container {
     padding: 0px 60px;
   }
+
   header .bottom {
     .bi-list {
       display: block;
     }
+
     ul {
       display: none;
     }
   }
 }
+
 @media screen and (max-width: 992px) {
-  #services .bottom {
-    flex-direction: column;
-    .card {
-      width: 100%;
-    }
-  }
+
+  // #services .bottom {
+  //   flex-direction: column;
+  //   .card {
+  //     width: 100%;
+  //   }
+  // }
   #unique .unique-center .bottom {
     grid-template-columns: repeat(2, auto);
-    }
-    #blog .bottom{
-    grid-template-columns: repeat(2 , auto);
-    }
-    footer .footer-center{
-        grid-template-columns: repeat(2, auto);
-    }
+  }
+
+  #blog .bottom {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  footer .footer-center {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  #services .bottom {
+    grid-template-columns: repeat(2, auto);
+  }
 }
 
 @media screen and (max-width:768px) {
-    .container{
-        padding: 0px 80px;
-    }
-    #unique .unique-center .bottom {
-        grid-template-columns: repeat(1, auto);
-    }
-    #blog .bottom{
-        grid-template-columns: repeat(1 , auto);
-    }
-    footer .footer-center{
-        grid-template-columns: repeat(1, auto);
-    }
+  .container {
+    padding: 0px 80px;
+  }
+
+  #unique .unique-center .bottom {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  #blog .bottom {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  footer .footer-center {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  #services .bottom {
+    grid-template-columns: repeat(1, auto);
+  }
 }

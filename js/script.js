@@ -18,7 +18,11 @@ window.addEventListener("scroll", () => {
 
 const bottom = document.querySelector("#services .bottom")
 
-fetch(`http://localhost:3000/sevices`)
+const loadBtn = document.querySelector("#loadBtn")
+
+let page = 1
+function getDataJson(){
+fetch(`http://localhost:3000/sevices?_page=${page}&_limit=3`)
 .then(response => response.json())
 .then(data => {
     data.forEach(element => {
@@ -28,15 +32,23 @@ fetch(`http://localhost:3000/sevices`)
         <h4><a href="">${element.name}</a><h4>
         <p>${element.description}</p>
             <i class="bi bi-heart"></i>
-            <button onclick="update(${element.id})">Update</button>
-            <button onclick="deleteCard(${element.id})">Delete</button>
-            <button onclick="details(${element.id})">View Details</button>
-    </div>
-    `
+            <div class="buttons">
+            <button id="update" onclick="update(${element.id})">Update</button>
+            <button id="delete" onclick="deleteCard(${element.id})">Delete</button>
+            <button id="detail" onclick="details(${element.id})">View Details</button>
+            </div>
+            </div>`
     })
 }) 
+}
+getDataJson()
+loadBtn.addEventListener("click", () =>{
+    page++;
+    getDataJson();
+})
+
 const update = (id)=>{
-    console.log(id);
+    window.location = `./add.html?id=${id}`
 }
 
 const details = (id)=>{

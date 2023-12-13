@@ -11,8 +11,7 @@ fetch(`http://localhost:3000/sevices/${id}`)
             <h4><a href="">${element.name}</a><h4>
             <p>${element.description}</p>
                 <i class="bi bi-heart"></i>
-        </div>
-            `
+        </div>`
 })
 
 

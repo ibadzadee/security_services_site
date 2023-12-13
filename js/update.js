@@ -1,8 +1,8 @@
-// const id = new URLSearchParams(window.location.search).get("id");
+const id = new URLSearchParams(window.location.search).get("id");
 
-// const nameInp = document.querySelector("#name");
-// const descriptionInp = document.querySelector("#descripton");
-// const imageInp = document.querySelector("#img");
+const nameInp = document.querySelector("#name");
+const descriptionInp = document.querySelector("#descripton");
+const imageInp = document.querySelector("#img");
 
 // const form = document.querySelector("#form");
 
@@ -47,3 +47,5 @@
 //             console.error("Error updating service:", error);
 //         });
 // }
+
+

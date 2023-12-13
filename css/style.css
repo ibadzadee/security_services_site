@@ -141,7 +141,14 @@ header img {
 #services {
   padding: 70px 0px;
 }
-#services .top {
+#services .center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#services .center .top {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,22 +156,22 @@ header img {
   text-align: center;
   gap: 10px;
 }
-#services .top h2 {
+#services .center .top h2 {
   font-size: 40px;
 }
-#services .top p {
+#services .center .top p {
   margin-bottom: 1rem;
   color: #777777;
 }
 #services .bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
   gap: 20px;
   padding-top: 80px;
 }
 #services .bottom .card {
-  width: 33%;
+  width: 100%;
   position: relative;
   background-color: #f9f9ff;
   padding: 30px 25px;
@@ -207,7 +214,15 @@ header img {
   background-color: #fab700;
   transition: all 0.5s ease 0s;
 }
-#services .bottom .card button {
+#services .bottom .card .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#services .bottom .card .buttons #update,
+#services .bottom .card .buttons #delete,
+#services .bottom .card .buttons #detail {
   padding: 5px 20px;
   border: 1px solid transparent;
   background-color: black;
@@ -215,8 +230,25 @@ header img {
   border-radius: 9999px;
   cursor: pointer;
 }
-#services .bottom .card button:hover {
+#services .bottom .card .buttons #update:hover,
+#services .bottom .card .buttons #delete:hover,
+#services .bottom .card .buttons #detail:hover {
   background-color: blue;
+  transition: all 0.5s ease;
+}
+#services #loadBtn {
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  background-color: #fab700;
+  font-weight: 800;
+  border-radius: 9999px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+#services #loadBtn:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid #fab700;
   transition: all 0.5s ease;
 }
 
@@ -438,12 +470,6 @@ footer .footer-center .follow .icons i {
   }
 }
 @media screen and (max-width: 992px) {
-  #services .bottom {
-    flex-direction: column;
-  }
-  #services .bottom .card {
-    width: 100%;
-  }
   #unique .unique-center .bottom {
     grid-template-columns: repeat(2, auto);
   }
@@ -451,6 +477,9 @@ footer .footer-center .follow .icons i {
     grid-template-columns: repeat(2, auto);
   }
   footer .footer-center {
+    grid-template-columns: repeat(2, auto);
+  }
+  #services .bottom {
     grid-template-columns: repeat(2, auto);
   }
 }
@@ -465,6 +494,9 @@ footer .footer-center .follow .icons i {
     grid-template-columns: repeat(1, auto);
   }
   footer .footer-center {
+    grid-template-columns: repeat(1, auto);
+  }
+  #services .bottom {
     grid-template-columns: repeat(1, auto);
   }
 }/*# sourceMappingURL=style.css.map */
