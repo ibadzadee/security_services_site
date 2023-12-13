@@ -69,3 +69,33 @@ function addFavorite(id){
         axios.post(`http://localhost:3000/favorites` , res.data)
     })
 }
+
+// ---mobile-nav---
+const menu = document.querySelector("header #menu")
+const mobileNav = document.querySelector("#mobile-nav")
+const mobileNavBody = document.querySelector("#mobile-nav-body")
+const exit = document.querySelector(".exit")
+
+menu.addEventListener("click", () => {
+    if(mobileNav.style.display == "none"){
+        mobileNav.style.display = "block"
+        mobileNavBody.style.display = "block"
+        // exit.style.display = "flex"
+    }
+    else{
+        mobileNav.style.display = "none"
+        mobileNavBody.style.display = "none"
+        // exit.style.display = "flex"
+    }
+})
+
+// exit.addEventListener("click", () => {
+//     mobileNav.style.display = ""
+//     mobileNavBody.style.display = ""
+//     exit.style.display = ""
+// })
+// mobileNavBody.addEventListener("click", () => {
+//     mobileNav.style.display = ""
+//     mobileNavBody.style.display = ""
+//     exit.style.display = ""
+// })
