@@ -28,13 +28,16 @@ fetch(`http://localhost:3000/sevices`)
         <h4><a href="">${element.name}</a><h4>
         <p>${element.description}</p>
             <i class="bi bi-heart"></i>
-            <button>Update</button>
+            <button onclick="update(${element.id})">Update</button>
             <button onclick="deleteCard(${element.id})">Delete</button>
             <button onclick="details(${element.id})">View Details</button>
     </div>
     `
     })
 }) 
+const update = (id)=>{
+    console.log(id);
+}
 
 const details = (id)=>{
     window.location = `./details.html?id=${id}`
