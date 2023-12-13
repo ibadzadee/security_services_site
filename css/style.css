@@ -458,6 +458,29 @@ footer .footer-center .follow .icons i {
   font-size: 40px;
 }
 
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 200px 0px;
+}
+.form form {
+  background-color: aquamarine;
+  padding: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+.form form label {
+  padding-top: 10px;
+  font-weight: 700;
+}
+
 @media screen and (max-width: 961px) {
   .container {
     padding: 0px 60px;

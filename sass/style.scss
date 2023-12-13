@@ -247,7 +247,7 @@ header {
     }
   }
 
-  
+
 // Load btn;
 
   #loadBtn{
@@ -497,6 +497,30 @@ footer {
     font-size: 40px;
   }
 }
+
+// add.HTML
+
+.form{
+  width: 100%;
+  @include display;
+  flex-direction: column;
+  gap: 20px;
+  padding: 200px 0px;
+  form{
+    background-color: aquamarine;
+    padding: 100px;
+    @include display(flex-start , flex-start);
+    flex-direction: column;
+    gap: 10px;
+    label{
+      padding-top: 10px;
+      font-weight: 700;
+    }
+  }
+}
+
+
+
 
 
 
