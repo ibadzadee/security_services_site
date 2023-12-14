@@ -538,7 +538,7 @@ footer {
 }
 
 
-// Update Html
+//---------------------------- Update ----------------------------
 #add{
 padding: 100px 0px;
 }
@@ -687,6 +687,46 @@ form{
   cursor: pointer;
   display: none;
 }
+
+//---------------------------- Favorite ----------------------------
+// #favorite{
+//   padding: 200px;
+//   @include display;
+//   flex-direction: column;
+//   h1{
+//     font-size: 30px;
+//     padding-bottom: 100px;
+//   }
+//   .card{
+//     width: 100%;
+//     @include display;
+//     gap: 20px;
+//     .element{
+//       @include display(flex-start , flex-start);
+//       flex-direction: column;
+//       gap: 10px;
+//       img{
+//         width: 100%;
+//       }
+//       .delete{
+//         width: 100%;
+//         @include display;
+//         button{
+//           padding: 10px 20px;
+//           background-color: red;
+//           border: 1px solid transparent;
+//           font-weight: 800;
+//           border-radius: 9999px;
+//           cursor: pointer;
+//           &:hover{
+//             opacity: 0.9;
+//             transition: all 0.5 ease;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 
 
